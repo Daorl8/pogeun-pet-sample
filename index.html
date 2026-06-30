@@ -9,7 +9,7 @@
 <meta property="og:site_name" content="포근 펫살롱" />
 <meta property="og:title" content="포근 펫살롱 · 서울 망원 소형견 전문 애견미용" />
 <meta property="og:description" content="우리 아이의 하루가 포근하도록. 소형견 전문 애견미용." />
-<meta property="og:image" content="https://images.unsplash.com/photo-1611173622933-91942d394b04?auto=format&fit=crop&w=1200&h=630&q=80" />
+<meta property="og:image" content="https://pogeun-pet-sample.lgt3232.workers.dev/photo-1611173622933-91942d394b04.jpg" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23CE8667'/><circle cx='16' cy='20' r='6' fill='%23fff'/><circle cx='9' cy='12' r='2.6' fill='%23fff'/><circle cx='14' cy='9' r='2.6' fill='%23fff'/><circle cx='18' cy='9' r='2.6' fill='%23fff'/><circle cx='23' cy='12' r='2.6' fill='%23fff'/></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,7 +28,6 @@
   a{text-decoration:none;color:inherit}
   img{display:block;max-width:100%}
   .inner{max-width:880px;margin:0 auto;padding:0 22px}
-  /* HEADER */
   header{position:sticky;top:0;z-index:10;background:rgba(252,249,244,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
   .nav{max-width:1080px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between}
   .logo{font-size:1.4rem;color:var(--dbrown)}
@@ -38,9 +37,8 @@
   .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:13px;font-weight:600;transition:opacity .2s,background .2s}
   .btn-sm{padding:9px 20px;font-size:.92rem;background:var(--terra);color:#fff}
   .btn-sm:hover{opacity:.9}
-  /* HERO (photo) */
   .hero{position:relative;min-height:76vh;display:flex;align-items:flex-end;justify-content:center;text-align:center;overflow:hidden}
-  .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1611173622933-91942d394b04?auto=format&fit=crop&w=1600&h=1300&q=80') center 30%/cover no-repeat;transform:scale(1.02)}
+  .hero-bg{position:absolute;inset:0;background:url('photo-1611173622933-91942d394b04.jpg') center 30%/cover no-repeat;transform:scale(1.02)}
   .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,48,40,.28) 0%,rgba(58,48,40,.10) 38%,rgba(58,48,40,.66) 100%)}
   .hero-content{position:relative;z-index:2;color:#fff;padding:0 22px 60px}
   .paw{width:58px;height:58px;margin:0 auto 16px;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.25))}
@@ -52,11 +50,9 @@
   .btn-fill:hover{opacity:.92}
   .btn-line{padding:15px 30px;border:1.5px solid rgba(255,255,255,.85);color:#fff;font-size:1rem;background:rgba(255,255,255,.08)}
   .btn-line:hover{background:rgba(255,255,255,.18)}
-  /* SECTION */
   section{padding:64px 0}
   .sec-eyebrow{text-align:center;font-size:.78rem;letter-spacing:.28em;color:var(--terra);font-weight:600;margin-bottom:8px}
   .sec-title{text-align:center;font-size:clamp(1.7rem,5vw,2.3rem);color:var(--dbrown);margin-bottom:36px}
-  /* ABOUT */
   .about{background:var(--white)}
   .about-grid{display:flex;flex-direction:column;gap:26px;align-items:center}
   .about-img{width:100%;border-radius:20px;overflow:hidden;box-shadow:0 14px 36px rgba(58,48,40,.10)}
@@ -64,14 +60,12 @@
   .about-txt{text-align:center}
   .about-txt h2{font-size:clamp(1.6rem,5vw,2.1rem);margin-bottom:14px;line-height:1.3}
   .about-txt p{color:var(--brown);font-size:1.02rem}
-  /* MENU */
   .menu-photo{width:100%;border-radius:18px;overflow:hidden;margin-bottom:30px;box-shadow:0 12px 30px rgba(58,48,40,.10)}
   .menu-photo img{width:100%;aspect-ratio:16/8;object-fit:cover}
   .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
   .row .name{font-size:1.12rem;font-weight:500}
   .row .price{font-family:'Jua',sans-serif;font-size:1.18rem;color:var(--terra);white-space:nowrap}
   .menu-note{margin-top:18px;font-size:.92rem;color:var(--mut);text-align:center}
-  /* BOOKING */
   .book{background:var(--coral)}
   .bk-btns{display:flex;flex-direction:column;gap:12px;max-width:760px;margin:0 auto}
   .bk{display:flex;align-items:center;justify-content:center;padding:17px;border-radius:15px;font-weight:600;font-size:1.02rem}
@@ -80,15 +74,12 @@
   .bk-c{background:var(--white);color:var(--dbrown);border:1px solid var(--line)}
   .bk:hover{opacity:.92}
   .hours{margin-top:22px;text-align:center;font-size:.96rem;color:var(--brown)}
-  /* VISIT */
   .visit{text-align:center}
   .visit .addr{font-size:1.1rem;color:var(--brown);margin-bottom:8px}
   .visit .sub{font-size:.95rem;color:var(--mut)}
-  /* FOOTER */
   footer{background:var(--dbrown);color:var(--cream);text-align:center;padding:34px 22px}
   footer .f-logo{font-size:1.2rem}
   footer .f-sub{margin-top:8px;font-size:.8rem;color:#b3a89e}
-  /* DESKTOP */
   @media(min-width:768px){
     .nav-links{display:flex}
     section{padding:84px 0}
@@ -140,7 +131,7 @@
       <div class="inner">
         <div class="about-grid">
           <div class="about-img">
-            <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&w=1000&h=750&q=80" alt="포근 펫살롱에서 미용을 마친 작은 강아지" loading="lazy" />
+            <img src="photo-1534361960057-19889db9621e.jpg" alt="포근 펫살롱에서 미용을 마친 작은 강아지" loading="lazy" />
           </div>
           <div class="about-txt">
             <p class="sec-eyebrow" style="text-align:inherit">ABOUT</p>
@@ -154,7 +145,7 @@
     <section id="menu">
       <div class="inner">
         <div class="menu-photo">
-          <img src="https://images.unsplash.com/photo-1719464454959-9cf304ef4774?auto=format&fit=crop&w=1200&h=600&q=80" alt="소형견 미용 작업 모습" loading="lazy" />
+          <img src="photo-1719464454959-9cf304ef4774.jpg" alt="소형견 미용 작업 모습" loading="lazy" />
         </div>
         <p class="sec-eyebrow">MENU</p>
         <h2 class="sec-title jua">미용 안내</h2>
