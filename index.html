@@ -9,6 +9,7 @@
 <meta property="og:site_name" content="포근 펫살롱" />
 <meta property="og:title" content="포근 펫살롱 · 서울 망원 소형견 전문 애견미용" />
 <meta property="og:description" content="우리 아이의 하루가 포근하도록. 소형견 전문 애견미용." />
+<meta property="og:image" content="https://images.unsplash.com/photo-1611173622933-91942d394b04?auto=format&fit=crop&w=1200&h=630&q=80" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23CE8667'/><circle cx='16' cy='20' r='6' fill='%23fff'/><circle cx='9' cy='12' r='2.6' fill='%23fff'/><circle cx='14' cy='9' r='2.6' fill='%23fff'/><circle cx='18' cy='9' r='2.6' fill='%23fff'/><circle cx='23' cy='12' r='2.6' fill='%23fff'/></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,6 +26,7 @@
   body{font-family:'Pretendard',sans-serif;color:var(--dbrown);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
   .jua{font-family:'Jua',sans-serif;font-weight:400;letter-spacing:.01em}
   a{text-decoration:none;color:inherit}
+  img{display:block;max-width:100%}
   .inner{max-width:880px;margin:0 auto;padding:0 22px}
   /* HEADER */
   header{position:sticky;top:0;z-index:10;background:rgba(252,249,244,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
@@ -36,22 +38,35 @@
   .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:13px;font-weight:600;transition:opacity .2s,background .2s}
   .btn-sm{padding:9px 20px;font-size:.92rem;background:var(--terra);color:#fff}
   .btn-sm:hover{opacity:.9}
-  /* HERO */
-  .hero{background:linear-gradient(180deg,#F1E1D6 0%,#F4EBE1 55%,var(--cream) 100%);text-align:center;padding:60px 22px 70px}
-  .paw{width:64px;height:64px;margin:0 auto 18px;display:block}
-  .eyebrow{font-size:.82rem;letter-spacing:.22em;color:var(--terra);font-weight:600;margin-bottom:14px}
-  .hero h1{font-size:clamp(2.7rem,8vw,4.6rem);color:var(--dbrown);line-height:1.1}
-  .hero .lead{margin-top:18px;font-size:clamp(1rem,3.2vw,1.3rem);color:var(--brown)}
-  .cta{margin-top:34px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-  .btn-fill{padding:15px 30px;background:var(--terra);color:#fff;font-size:1rem}
-  .btn-fill:hover{opacity:.9}
-  .btn-line{padding:15px 30px;border:1.5px solid var(--terra);color:var(--terra);font-size:1rem}
-  .btn-line:hover{background:rgba(206,134,103,.08)}
+  /* HERO (photo) */
+  .hero{position:relative;min-height:76vh;display:flex;align-items:flex-end;justify-content:center;text-align:center;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1611173622933-91942d394b04?auto=format&fit=crop&w=1600&h=1300&q=80') center 30%/cover no-repeat;transform:scale(1.02)}
+  .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(58,48,40,.28) 0%,rgba(58,48,40,.10) 38%,rgba(58,48,40,.66) 100%)}
+  .hero-content{position:relative;z-index:2;color:#fff;padding:0 22px 60px}
+  .paw{width:58px;height:58px;margin:0 auto 16px;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.25))}
+  .eyebrow{font-size:.82rem;letter-spacing:.22em;color:#FCE3D4;font-weight:600;margin-bottom:12px}
+  .hero h1{font-size:clamp(2.7rem,8vw,4.6rem);color:#fff;line-height:1.1;text-shadow:0 2px 16px rgba(0,0,0,.3)}
+  .hero .lead{margin-top:16px;font-size:clamp(1rem,3.2vw,1.3rem);color:rgba(255,255,255,.94)}
+  .cta{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn-fill{padding:15px 30px;background:var(--terra);color:#fff;font-size:1rem;box-shadow:0 6px 18px rgba(206,134,103,.35)}
+  .btn-fill:hover{opacity:.92}
+  .btn-line{padding:15px 30px;border:1.5px solid rgba(255,255,255,.85);color:#fff;font-size:1rem;background:rgba(255,255,255,.08)}
+  .btn-line:hover{background:rgba(255,255,255,.18)}
   /* SECTION */
   section{padding:64px 0}
   .sec-eyebrow{text-align:center;font-size:.78rem;letter-spacing:.28em;color:var(--terra);font-weight:600;margin-bottom:8px}
   .sec-title{text-align:center;font-size:clamp(1.7rem,5vw,2.3rem);color:var(--dbrown);margin-bottom:36px}
+  /* ABOUT */
+  .about{background:var(--white)}
+  .about-grid{display:flex;flex-direction:column;gap:26px;align-items:center}
+  .about-img{width:100%;border-radius:20px;overflow:hidden;box-shadow:0 14px 36px rgba(58,48,40,.10)}
+  .about-img img{width:100%;aspect-ratio:4/3;object-fit:cover}
+  .about-txt{text-align:center}
+  .about-txt h2{font-size:clamp(1.6rem,5vw,2.1rem);margin-bottom:14px;line-height:1.3}
+  .about-txt p{color:var(--brown);font-size:1.02rem}
   /* MENU */
+  .menu-photo{width:100%;border-radius:18px;overflow:hidden;margin-bottom:30px;box-shadow:0 12px 30px rgba(58,48,40,.10)}
+  .menu-photo img{width:100%;aspect-ratio:16/8;object-fit:cover}
   .row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
   .row .name{font-size:1.12rem;font-weight:500}
   .row .price{font-family:'Jua',sans-serif;font-size:1.18rem;color:var(--terra);white-space:nowrap}
@@ -77,9 +92,11 @@
   @media(min-width:768px){
     .nav-links{display:flex}
     section{padding:84px 0}
-    .hero{padding:80px 22px 92px}
     .bk-btns{flex-direction:row;gap:18px}
     .bk{flex:1}
+    .about-grid{flex-direction:row;text-align:left}
+    .about-img{flex:1}
+    .about-txt{flex:1;text-align:left}
   }
 </style>
 </head>
@@ -89,6 +106,7 @@
     <nav class="nav">
       <a href="#home" class="logo jua">포근 펫살롱</a>
       <div class="nav-links">
+        <a href="#about">소개</a>
         <a href="#menu">미용 안내</a>
         <a href="#book">예약</a>
         <a href="#visit">오시는 길</a>
@@ -99,24 +117,45 @@
 
   <main id="home">
     <section class="hero">
-      <svg class="paw" viewBox="0 0 64 64" aria-hidden="true">
-        <circle cx="32" cy="42" r="13" fill="#CE8667"/>
-        <circle cx="14" cy="26" r="6" fill="#CE8667"/>
-        <circle cx="25" cy="18" r="6" fill="#CE8667"/>
-        <circle cx="39" cy="18" r="6" fill="#CE8667"/>
-        <circle cx="50" cy="26" r="6" fill="#CE8667"/>
-      </svg>
-      <p class="eyebrow">서울 망원 · 소형견 전문</p>
-      <h1 class="jua">포근 펫살롱</h1>
-      <p class="lead">우리 아이의 하루가 포근하도록.</p>
-      <div class="cta">
-        <a href="#book" class="btn btn-fill">예약하기</a>
-        <a href="https://pf.kakao.com" class="btn btn-line">카톡 문의</a>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
+        <svg class="paw" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="42" r="13" fill="#fff"/>
+          <circle cx="14" cy="26" r="6" fill="#fff"/>
+          <circle cx="25" cy="18" r="6" fill="#fff"/>
+          <circle cx="39" cy="18" r="6" fill="#fff"/>
+          <circle cx="50" cy="26" r="6" fill="#fff"/>
+        </svg>
+        <p class="eyebrow">서울 망원 · 소형견 전문</p>
+        <h1 class="jua">포근 펫살롱</h1>
+        <p class="lead">우리 아이의 하루가 포근하도록.</p>
+        <div class="cta">
+          <a href="#book" class="btn btn-fill">예약하기</a>
+          <a href="https://pf.kakao.com" class="btn btn-line">카톡 문의</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="inner">
+        <div class="about-grid">
+          <div class="about-img">
+            <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?auto=format&fit=crop&w=1000&h=750&q=80" alt="포근 펫살롱에서 미용을 마친 작은 강아지" loading="lazy" />
+          </div>
+          <div class="about-txt">
+            <p class="sec-eyebrow" style="text-align:inherit">ABOUT</p>
+            <h2 class="jua">작은 아이만, 천천히 한 마리씩</h2>
+            <p>포근 펫살롱은 소형견만 받는 1:1 예약제 살롱이에요. 한 번에 한 아이에게만 집중해, 무서워하지 않게 천천히. 미용이 끝나면 사진 한 장 보내드려요.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="menu">
       <div class="inner">
+        <div class="menu-photo">
+          <img src="https://images.unsplash.com/photo-1719464454959-9cf304ef4774?auto=format&fit=crop&w=1200&h=600&q=80" alt="소형견 미용 작업 모습" loading="lazy" />
+        </div>
         <p class="sec-eyebrow">MENU</p>
         <h2 class="sec-title jua">미용 안내</h2>
         <div class="row"><span class="name">소형견 목욕 · 위생미용</span><span class="price">35,000원</span></div>
